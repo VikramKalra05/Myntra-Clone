@@ -1,0 +1,130 @@
+.navbar{
+    /* border: 1px solid red; */
+    height: 80px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    display: flex;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar>div{
+    display: flex;
+    align-items: center;
+    /* border: 1px solid red; */
+    height: auto;
+}
+
+.navbar>div>div{
+    display: flex;
+    align-items: center;
+}
+
+img{
+    height: 36px;
+}
+
+.search>img{
+    height: 15px;
+}
+
+.linkSection{
+    margin-left: 25px;
+    width: 50%;
+    justify-content: space-around;
+}
+
+a{
+    text-decoration: none;
+    color: #282C3F;
+    font-weight: 700;
+    font-size: 14px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.linkSection>div>a:hover{
+    border-bottom: 2px solid #EE5F73;
+}
+
+.linkSection>div{
+    width: 80%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.userSection{
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.search{
+    /* border: 1px solid blue; */
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #F5F5F6;
+}
+
+.search>input{
+    margin-left: 10px;
+    background-color: #F5F5F6;
+    width: 250px;
+    border: none;
+}
+
+.userDiv{
+    width: 30%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.userDiv>div{
+    /* padding-top: 30px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userDiv>div>img{
+    height: 25px;
+    display: block;
+    margin-top: 30px;
+}
+
+.userDiv p{
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+@media all and (min-width: 768px) and (max-width:1024px){
+    .linkSection>div>a{
+        font-size: 12px;
+    }
+    .linkSection{
+        width: 20%;
+    }
+    .userSection{
+        width: 60%;
+    }
+}
+@media all and (min-width: 320px) and (max-width:767px){
+    .linkSection>div>a{
+        font-size: 12px;
+    }
+    .linkSection{
+        width: 20%;
+    }
+    .userSection{
+        width: 50%;
+    }
+    .userDiv{
+        width:70%;
+    }
+}
