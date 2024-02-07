@@ -32,7 +32,6 @@ productRoutes.get("/kids", auth, async (req, res) => {
         const kidsClothes = await KidsModel.find({filter});
         res.status(200).send({"kids": kidsClothes});
     } catch (error) {
-        console.log(error);
         res.status(400).send({"err": error});
     }
 });
