@@ -4,7 +4,7 @@ const { userRouter } = require("./routes/userRoutes");
 const { auth } = require("./middleware/auth.middleware");
 const { productRoutes } = require("./routes/productRoutes");
 const dotenv = require("dotenv").config();
-const cors = require(cors);
+const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT;
