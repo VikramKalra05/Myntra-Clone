@@ -9,9 +9,10 @@ const productRoutes = express.Router();
 productRoutes.get("/men", auth, async (req, res) => {
     const { filter, sort } = req.query;
     try {
-        const mensClothes = await MensModel.find({filter}).sort({sort});
+        const mensClothes = await MensModel.find({filter}).sort(sort);
         res.status(200).send({"mens": mensClothes});
     } catch (error) {
+        console.log(error);
         res.status(400).send({"err": error});
     }
 });
@@ -19,7 +20,7 @@ productRoutes.get("/men", auth, async (req, res) => {
 productRoutes.get("/women", auth, async (req, res) => {
     const { filter, sort } = req.query;
     try {
-        const womenClothes = await WomenModel.find({filter}).sort({sort});
+        const womenClothes = await WomenModel.find({filter}).sort(sort);
         res.status(200).send({"womens": womenClothes});
     } catch (error) {
         res.status(400).send({"err": error});
@@ -30,7 +31,7 @@ productRoutes.get("/kids", auth, async (req, res) => {
     const { filter, sort } = req.query;
 
     try {
-        const kidsClothes = await KidsModel.find({filter}).sort({sort});
+        const kidsClothes = await KidsModel.find({filter}).sort(sort);
         res.status(200).send({"kids": kidsClothes});
     } catch (error) {
         res.status(400).send({"err": error});
