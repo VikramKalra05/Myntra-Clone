@@ -12,7 +12,6 @@ productRoutes.get("/men", auth, async (req, res) => {
         const mensClothes = await MensModel.find({filter}).sort(sort);
         res.status(200).send({"mens": mensClothes});
     } catch (error) {
-        console.log(error);
         res.status(400).send({"err": error});
     }
 });
