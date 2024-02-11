@@ -1,4 +1,6 @@
 const express = require("express");
+const swaggerJSdoc = require("swagger-jsdoc");
+const swaggerUi = require("swagger-ui-express");
 const { connection } = require("./config/db");
 const { userRouter } = require("./routes/userRoutes");
 const { auth } = require("./middleware/auth.middleware");
@@ -8,6 +10,25 @@ const cors = require("cors");
 
 const app = express();
 const PORT = process.env.PORT;
+
+const options={
+    definition: {
+        openapi:"3.0.0",
+        info: {
+            title:"Myntra",
+            version:"1.0.0"
+        },
+        servers:[
+            {
+                url:"https://myntra-vzgy.onrender.com/"
+            }
+        ]
+    },
+    apis:["./routes/*.js"]
+}
+
+const swaggerSpec=swaggerJSdoc(options)
+app.use("/docs",swaggerUi.serve,swaggerUi.setup(swaggerSpec))
 
 app.use(cors({
     origin: "*"
