@@ -18,7 +18,7 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
-p{
+.footer p{
     color: #696B79;
     line-height: 0.7;
     font-size: 15px;
@@ -27,6 +27,10 @@ p{
 .copyrightSection span{
     color: #526CD0;
     font-weight: 600;
+}
+
+.copyrightSection{
+    text-align: center;
 }
 
 .linkSection h1{

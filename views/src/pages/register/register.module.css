@@ -1,0 +1,70 @@
+.outerDiv{
+    background-color: #feeef2;
+    width: 100%;
+    text-align: left; 
+    padding: 50px 0 100px 0;
+}
+
+.outerDiv>div{
+    margin: auto;
+    width: 30%;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.outerDiv img{
+    width: 100%;
+    height: auto;
+}
+
+.outerDiv h1{
+    color: #424553;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0 20px 25px;
+}
+
+.outerDiv input{
+    width: 85%;
+    margin: auto;
+    margin-top: 20px;
+    display: block;
+    padding: 10px;
+}
+
+.outerDiv p{
+    margin-left: 25px;
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    color: #686a76;
+}
+
+.outerDiv span, .outerDiv a{
+    color: #ff3f6c;
+    font-weight: 700;
+    margin: 0 5px 0 5px;
+    cursor: pointer;
+}
+
+.outerDiv button{
+    font-weight: 700;
+    background-color: #ff3f6c;
+    color: white;
+    width: 90%;
+    padding: 12px;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+    border: none;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+
+@media all and (min-width: 320px) and (max-width: 800px){
+    .outerDiv>div{
+        width: 60%;
+    }
+}

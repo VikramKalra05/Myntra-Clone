@@ -1,0 +1,135 @@
+#bag{
+    width: 100%;
+    padding-top: 50px;
+    /* border: 1px solid red; */
+}
+
+.heading{
+    color: #282c3f;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 80px;
+}
+
+.bold{
+    font-weight: 700;
+}
+
+#total{
+    font-weight: 800;
+}
+
+.bagCont{
+    width: 50%;
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+}
+
+.clothCard{
+    width: 220px;
+    border: 1px solid rgb(151, 146, 140, 0.5);
+}
+
+.clothCard a, .clothCard img{
+    width: 220px;
+    height: auto;
+}
+
+.clothCard p{
+    font-size: 16px;
+    color: #282c3f;
+    font-weight: 700;
+    text-align: center;
+}
+
+.clothCard h2{
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #282c3f;
+    width: 90%;
+    margin: auto;
+    text-overflow: ellipsis;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.buttonDiv{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    gap: 10px;
+}
+
+.buttonDiv>button{
+    background-color: white;
+    color: #ff3e6c;
+    padding: 10px;
+    width: 100%;
+    font-weight: 700;
+    border-top: 1px solid rgb(151, 146, 140, 0.5);
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttonDiv>button:hover, .priceDiv>button:hover{
+    background-color: #ff3e6c;
+    color: white;
+}
+
+.priceDiv{
+    margin-right: 50px;
+    padding: 0 20px 0 20px;
+    width: 30%;
+    font-weight: 700;
+}
+
+#discount{
+    color: #03a685;
+}
+
+.priceDiv button{
+    background-color: white;
+    color: #ff3e6c;
+    padding: 10px;
+    width: 100%;
+    font-weight: 700;
+    border-top: 1px solid rgb(151, 146, 140, 0.5);
+}
+
+.priceDiv>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media all and (min-width: 1024px) and (max-width: 1300px){
+    .bagCont{
+        grid-template-columns: repeat(2,1fr);
+        gap: 50px;
+    }
+}
+@media all and (min-width: 768px) and (max-width: 1023px){
+    .bagCont{
+        grid-template-columns: repeat(1,1fr);
+        gap: 30px;
+        width: 30%;
+    }
+}
+@media all and (min-width: 571px) and (max-width: 767px){
+    .bagCont{
+        grid-template-columns: repeat(1,1fr);
+        gap: 50px;
+    }
+}
+@media all and (min-width: 320px) and (max-width: 570px){
+
+    .bagCont>div{
+        margin: auto;
+
+    }
+}

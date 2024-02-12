@@ -1,10 +1,16 @@
 .navbar{
     /* border: 1px solid red; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
     height: 80px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     display: flex;
     align-items: center;
     display: flex;
+    width: 100%;
+    background-color: white;
     justify-content: space-between;
 }
 
@@ -66,6 +72,7 @@ a{
     padding: 15px;
     border-radius: 10px;
     background-color: #F5F5F6;
+    margin-left: -50px;
 }
 
 .search>input{
@@ -73,27 +80,54 @@ a{
     background-color: #F5F5F6;
     width: 250px;
     border: none;
+    caret-color: #ff2459;
+    outline: 0;
 }
 
 .userDiv{
     width: 30%;
     height: 60px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
-.userDiv>div{
-    /* padding-top: 30px; */
+.userCont{
+    display: grid;
+    height: 20px;
+    margin-bottom: 80px;
+    margin-left: -60%;
+    padding-left: -60%;
+    grid-template-rows: repeat(2,1fr);
+    /* border: 1px solid red    ; */
+    width: 20px;
+}
+
+.userCont>div{
+    visibility:hidden;
+}
+
+.userDiv a{
+    margin-bottom: 40px;
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.userDiv>div>img{
+.userDiv>a>img{
     height: 25px;
     display: block;
     margin-top: 30px;
+}
+.userDiv>div>a>img{
+    height: 25px;
+    display: block;
+    margin-top: 30px;
+}
+
+#wishlist{
+    margin-left: 120px;
 }
 
 .userDiv p{
@@ -101,6 +135,110 @@ a{
     font-weight: 700;
     margin-top: 0px;
     margin-bottom: 30px;
+}
+
+.userCont p{
+    margin-top: 0.1 px;
+}
+
+.userCont a{
+    margin-left: 30%;
+    /* border: 1px solid red; */
+    width: 60px;
+    height: 100px;
+}
+
+.hidDiv{
+    background-color: white;
+    width: 292px;
+    margin-top: -50px;
+}
+
+#hidBtn{
+    display: inline;
+    text-align: center;
+    margin-left: 15px;
+    width: 100px;
+    height: 30px;
+    padding: 10px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;    
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: #ff2459;
+}
+
+#hidBtn:hover{
+    border: 2px solid #ff2459;
+}
+
+.hidLine{
+    margin: 25px 0 25px 0;
+}
+
+.hidList{
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #3e4152;
+    cursor: pointer;
+    line-height: 0.11;
+    padding-bottom: -25px;
+}
+
+#wishHid{
+    /* border: 1px solid red; */
+    color: #3e4152;
+    height: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    margin-left: 8px;
+    margin-top: -5px;
+    margin-bottom: 25px;
+}
+
+#hidHeading{
+    margin-left: 15px;
+    padding-top: 15px;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #3e4152;
+    cursor: pointer;
+    /* line-height: 0.11; */
+}
+
+.hidP{
+    margin-left: 15px;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #3e4152;
+    cursor: pointer;
+    line-height: 0.11;
+}
+
+.hidList:hover{
+    font-weight: bold;
+    display: block;
+    font-size: 12px;
+}
+
+#wishHid:hover{
+    display: block;
+    font-weight: 700;
+    margin-left: 8px;
+    margin-top: -5px;
+    margin-bottom: 25px;
+}
+
+.hidLine{
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    width: 90%;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 @media all and (min-width: 768px) and (max-width:1024px){
@@ -126,5 +264,6 @@ a{
     }
     .userDiv{
         width:70%;
+        /* visibility: none; */
     }
 }
