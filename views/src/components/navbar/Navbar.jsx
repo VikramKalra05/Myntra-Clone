@@ -60,9 +60,9 @@ const Navbar = () => {
                             aria-label='Options'
                             icon={<HamburgerIcon />}></MenuButton>
                         <MenuList marginLeft="-100px">
-                            <MenuItem><Link>MEN</Link></MenuItem>
-                            <MenuItem><Link>WOMEN</Link></MenuItem>
-                            <MenuItem><Link>KIDS</Link></MenuItem>
+                            <MenuItem><Link to="/shop/men">MEN</Link></MenuItem>
+                            <MenuItem><Link to="/shop/women">WOMEN</Link></MenuItem>
+                            <MenuItem><Link to="/shop/kids">KIDS</Link></MenuItem>
                             <MenuItem><Link>HOME & LIVING</Link></MenuItem>
                             <MenuItem><Link>BEAUTY</Link></MenuItem>
                             <MenuItem><Link>STUDIO</Link></MenuItem>
