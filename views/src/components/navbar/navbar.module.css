@@ -85,11 +85,14 @@ a{
 }
 
 .userDiv{
-    width: 30%;
+    /* width: 30%; */
     height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* border: 1px solid red; */
+    /* overflow: hidden; */
+    gap: 0px;
 }
 
 .userCont{
